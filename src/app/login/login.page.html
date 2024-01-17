@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid class="wrapper">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-row class="Logo">
+    <ion-card>
+      <img alt="Logo login" src="assets\img\Login1.png"/>
+    </ion-card>
+  </ion-row>
+
+  <div>
+    <div>
+      <ion-input class="center-content" label="Username" [(ngModel)]="userLoginModal.username"></ion-input>
+      <ion-input class="center-content" label="Password" [(ngModel)]="userLoginModal.password"></ion-input>
+    </div>
+    <div>
+      <!--
+        Navegación con una función.
+      -->
+      <ion-button color="success" (click)="userLogin(userLoginModal)">Ingresar</ion-button>
+    </div>
+    <div>
+      <!--
+        Navegación via HTML.
+      
+      <ion-button [routerLink]="['/usuario',userLoginModal.username]">Registro</ion-button> -->
+    </div>
+  </div>
+
+  <a routerLink='/reset'> Olvidé mi contraseña</a>
+  </ion-grid>
+</ion-content>
+
+<!--
+  Docs
+  https://ionicframework.com/docs/angular/navigation
+-->
